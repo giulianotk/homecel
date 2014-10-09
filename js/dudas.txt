@@ -1,0 +1,9 @@
+DUDAS:
+1.- Al momento de hacer la compra, que se inserta donde? segun yo es en hcticket y hcventa, cierto?
+2.- Si es así y debido a que el idCliente es no nulo, habrá un cliente genérico??
+3.- De donde sale o que genera el folio factura que esta en HCTICKET?
+4.- El campo fecha es fecha y hora o solo fecha? necesita algun formato en especifico??
+5.- HCVENTA como funciona? de donde se llenan sus campos: idArticulo e idDescuento?? Como y a que hora se llena esa tabla?
+6.- Cuando se hace clic en borrar todo, podrias ayudarme a establecer los existencia de todo lo que quedó en la variable de sesión "carrito"? podria hacerlo pero no quiero pensar...
+7.- Apartado igual necesitara un carrito temporal donde se guarde lo que se aparta, no? y despues insertarlo todo en apartado, un insert por articulo?
+8.- En HCEMPLEADO que es idPerfil supongo que se relaciona con HCPERFIL.idperfil, pero ya tienen perfiles predeterminados? solo eran dos no? cajero y admin?
