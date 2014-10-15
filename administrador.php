@@ -121,22 +121,26 @@
 
 
 <section style="width:95%;">
-
-
-
-	<!-- <div id="tabs">
-
-		<a href="apartado.php"><div class="tab">Agregar Apartado</div></a>
-
-		<a href="agregar-accesorios.php"><div class="tab">Agregar Accesorios</div>
-
-		<a href="ver-apartados.php"><div class="tab activo">Ver Apartados</div></a>
-
-	</div> -->
-
 	
+	<div id="tabs">
+
+		<a href="administrador.php?a=ad"><div class="tab activo">Administrador</div></a>
+
+		<!-- <a href="agregar-accesorios.php"><div class="tab">Agregar Accesorios</div>
+
+		<a href="agregar-chips.php?a=i"><div class="tab">Agregar Empleados</div></a>
+
+		<a href="agregar-tarjetas.php?a=i"><div class="tab">Agregar Sucursal</div></a>
+
+		<a href="agregar-imei.php?a=i"><div class="tab"><p>Telefonos sin IMEI</p> <span id="no-imei"> </span></div></a>
+
+		<a href="ver-inventario.php?a=i"><div class="tab">Ver Todo</div></a>
+ -->
+	</div>
 
 	<div id="inventario">
+
+
 
 	<h1>Administrador</h1>
 
@@ -145,42 +149,43 @@
 	<?php if(isset($mensaje)) echo $mensaje . "<br />"; ?>
 
 
-
-	<p>Cambiar contraseña para <?php echo $_SESSION['usuario'] ?></p>
+	<div class="tercio">
+	<h2>Cambiar contraseña para <?php echo $_SESSION['usuario'] ?></h2>
 
 	<form action="#" method="POST">
 
-		<table style="max-width:200px;">
+		<table class="modulitos">
 
-			<tr><td>Contraseña actual</td><td><input type="password" name="passActual" size="50" /></td></tr>
+			<tr><td>Contraseña actual</td><td><input class="mod-inp" type="password" name="passActual" size="50" /></td></tr>
 
-			<tr><td>Contraseña nueva</td><td><input type="password" name="passNueva1" size="50" /></td></tr>
+			<tr><td>Contraseña nueva</td><td><input class="mod-inp" type="password" name="passNueva1" size="50" /></td></tr>
 
-			<tr><td>Confirmar contraseña nueva</td><td><input type="password" name="passNueva2" size="50" /></td></tr>
+			<tr><td>Confirmar contraseña nueva</td><td><input class="mod-inp" type="password" name="passNueva2" size="50" /></td></tr>
 
-			<tr><td><td><input type="submit" name="editarPass" /></td></td></tr>
+			<tr><td><td><input type="submit" name="editarPass" class="boton-azul grande" value="Guardar" /></td></td></tr>
 
 		</table>
 
 	</form>
+	</div>
 
 
 
-	<p>Agregar Empleado</p>
 
-
+	<div class="tercio">
+	<h2>Agregar Empleado</h2>
 
 	<form action="#" method="POST">
 
-		<table style="max-width:200px;">
+		<table class="modulitos">
 
-			<tr><td>Clave de Empleado</td><td><input type="text" name="nuevoEmpleado" size="50" /></td></tr>
+			<tr><td>Clave de Empleado</td><td><input  class="mod-inp" type="text" name="nuevoEmpleado" size="50" /></td></tr>
 
-			<tr><td>Contraseña</td><td><input type="password" name="nuevaContrasena" size="50" /></td></tr>
+			<tr><td>Contraseña</td><td><input  class="mod-inp" type="password" name="nuevaContrasena" size="50" /></td></tr>
 
 			<tr><td>Perfil</td><td>
 
-				<select name="perfil">
+				<select name="perfil"  class="mod-inp">
 
 				<?php while($perfiles = $resPerfiles->fetch_assoc()) { ?>
 
@@ -194,7 +199,7 @@
 
 			<tr><td>Sucursal</td><td>
 
-				<select name="sucursal">
+				<select name="sucursal" class="mod-inp">
 
 				<?php while($sucursales = $resSucursales->fetch_assoc()) { ?>
 
@@ -206,29 +211,29 @@
 
 			</td></tr>
 
-			<tr><td><td><input type="submit" name="agregarEmpleado" /></td></td></tr>
+			<tr><td><td><input type="submit" name="agregarEmpleado" class="boton-azul grande" value="Agregar" /></td></td></tr>
 
 		</table>
 
 	</form>
+	</div>
 
 
+	<div class="tercio">
 
-	<p>Agregar Sucursal</p>
-
-
+	<h2>Agregar Sucursal</h2>
 
 	<form action="#" method="POST">
 
-		<table style="max-width:400px;">
+		<table class="modulitos">
 
-			<tr><td>Sucursal</td><td><input type="text" name="nuevoNombreSuc" size="50" /></td></tr>			
+			<tr><td>Sucursal</td><td><input class="mod-inp" type="text" name="nuevoNombreSuc" size="50" /></td></tr>			
 
-			<tr><td>Dirección</td><td><input type="text" name="nuevaDireccion" size="50" /></td></tr>
+			<tr><td>Dirección</td><td><input  class="mod-inp"type="text" name="nuevaDireccion" size="50" /></td></tr>
 
 			<tr><td>Estado</td><td>
 
-				<select name="estado">
+				<select name="estado" class="mod-inp">
 
 					<option value="Aguascalientes">Aguascalientes</option>
 
@@ -298,7 +303,7 @@
 
 			</td></tr>
 
-			<tr><td><td><input type="submit" name="agregarSucursal" /></td></td></tr>
+			<tr><td><td><input type="submit" name="agregarSucursal" value="Agregar" class="boton-azul grande" /></td></td></tr>
 
 		</table>
 
